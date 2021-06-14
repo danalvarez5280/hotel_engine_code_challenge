@@ -1,38 +1,133 @@
-.App {
+.card-title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium;
+  color: black;
+}
+
+.data-card {
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px 10px;
+  padding: 2px 3px;
+  overflow: hidden;
+  width: 280px;
+}
+
+.detail-page {
+  align-items: center;
+  background-color: darkslategrey;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.detail-page__description,
+.detail-page__language,
+.detail-page__link,
+.detail-page__stars,
+.detail-page__title {
+  align-items: center;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px;
+  width: 250px;
+}
+
+.detail-page__title {
+  text-align: center
+}
+
+.detail-page__link {
+  margin-bottom: 25px;
+}
+
+.empty-search {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.empty-search__image {
+  width: 250px;
+}
+
+.empty-search__text {
+  padding: 0 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin: 25px 0;
+}
+
+.page-layout {
+  align-items: flex-start;
+  background-color: darkslategrey;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-input {
+  height: 3rem;
+  margin-right: 5px;
+}
+
+.search-input__container {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.select-button {
+  background-color: #61dafb;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  padding: 2px 3px;
+}
+
+.select-button:hover, .selected-button {
+  background-color: darkblue;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.sort-search {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  width: 320px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 600px) {
+  .empty-search__image {
+    width: 450px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .empty-search__text {
+    font-size: 3rem;
+  }
+
+  .search-input {
+    width: 280px;
   }
 }
